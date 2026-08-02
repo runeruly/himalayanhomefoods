@@ -165,32 +165,4 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.add('scroll-active');
         });
     }
-
-    // --- 6. Background Music Control ---
-    const bgMusic = document.getElementById('bgMusic');
-    const musicToggleBtn = document.getElementById('musicToggleBtn');
-    const musicIcon = document.getElementById('musicIcon');
-    const musicTooltip = document.querySelector('.music-tooltip');
-
-    if (musicToggleBtn && bgMusic) {
-        // Set low volume for subtle background music
-        bgMusic.volume = 0.25;
-
-        musicToggleBtn.addEventListener('click', () => {
-            if (bgMusic.paused) {
-                bgMusic.play().then(() => {
-                    musicToggleBtn.classList.add('playing');
-                    musicIcon.className = 'fa-solid fa-volume-high';
-                    musicTooltip.textContent = 'Mute Music';
-                }).catch(error => {
-                    console.log("Audio playback failed due to user interaction policy:", error);
-                });
-            } else {
-                bgMusic.pause();
-                musicToggleBtn.classList.remove('playing');
-                musicIcon.className = 'fa-solid fa-volume-xmark';
-                musicTooltip.textContent = 'Play Traditional Flute Dhoon';
-            }
-        });
-    }
 });
