@@ -260,13 +260,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--color-terracotta);
+    border: 3px solid var(--color-terracotta);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: var(--transition-smooth);
+}
+
+.main-header.scrolled .logo-img {
+    width: 60px;
+    height: 60px;
 }
 
 .logo-area:hover .logo-img {
