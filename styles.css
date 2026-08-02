@@ -501,7 +501,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Our Story Section */
 .story-section {
-    padding: 8rem 0;
+    padding: 5rem 0 8rem;
     background-color: var(--bg-primary);
     position: relative;
 }
@@ -877,7 +877,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* How to Order Section */
 .how-to-order-section {
-    padding: 8rem 0;
+    padding: 8rem 0 5rem;
     background-color: var(--bg-primary);
 }
 
