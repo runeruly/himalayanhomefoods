@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Himalayan Home Foods - Authentic Nepali traditional dishes like Momo, Sel Roti, and Achar prepared fresh by Arun Paudel. Call to place your order today!">
+    <title>Himalayan Home Foods | Real Taste of Home</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#home" class="logo-area">
+                <img src="assets/logo.jpg" alt="Himalayan Home Foods Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-name">Himalayan</span>
+                    <span class="brand-tagline">Home Foods</span>
+                </div>
+            </a>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#how-to-order" class="nav-link">How to Order</a></li>
+                    <li><a href="#story" class="nav-link">Our Story</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-cta-wrapper">
+                    <a href="tel:301-332-9667" class="btn btn-nav-cta">
+                        <i class="fa-solid fa-phone"></i> 301-332-9667
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg" style="background-image: linear-gradient(rgba(43, 31, 26, 0.4), rgba(43, 31, 26, 0.7)), url('assets/hero_bg.png');"></div>
+            <div class="hero-content-container">
+                <div class="hero-content">
+                    <span class="hero-subtitle scroll-reveal">AUTHENTIC NEPALI CUISINE</span>
+                    <h1 class="hero-title scroll-reveal">Real Taste of Home</h1>
+                    <p class="hero-description scroll-reveal">Experience the rich heritage of Himalayan flavors. Handcrafted, fresh, and prepared daily using traditional mountain recipes passed down through generations.</p>
+                    <div class="hero-actions scroll-reveal">
+                        <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+                        <a href="tel:301-332-9667" class="btn btn-secondary">
+                            <i class="fa-solid fa-phone"></i> Call to Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bottom-curve">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,42.4V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Traditional Menu Section -->
+        <section class="menu-section" id="menu">
+            <div class="menu-bg-accent"></div>
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-tag">HANDCRAFTED DELICACIES</span>
+                    <h2 class="section-title">Our Traditional Menu</h2>
+                    <p class="section-desc">Every dish is prepared by hand on the day of pickup. Browse our specialties below and call us to place your order.</p>
+                </div>
+
+                <!-- Menu Tabs -->
+                <div class="menu-tabs scroll-reveal">
+                    <button class="tab-btn active" data-filter="all">All Specialties</button>
+                    <button class="tab-btn" data-filter="momo">Momo (Dumplings)</button>
+                    <button class="tab-btn" data-filter="selroti">Sel Roti</button>
+                </div>
+
+                <!-- Menu Grid -->
+                <div class="menu-grid" id="menuGrid">
+                    
+                    <!-- Momo Card -->
+                    <div class="menu-card" data-category="momo">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/momo.png" alt="Steamed Momo Platter" class="menu-card-img">
+                            <span class="menu-card-tag">Signature</span>
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-item-title">Traditional Steamed Momo</h3>
+                                <div class="menu-item-price-block">
+                                    <span class="menu-item-price">$10</span>
+                                    <span class="menu-item-pieces">15 Pieces</span>
+                                </div>
+                            </div>
+                            <p class="menu-item-desc">Juicy ground meat or seasoned vegetable fillings mixed with Himalayan herbs, wrapped in delicate dough, steamed to perfection. Served with our classic sesame-tomato momo achar.</p>
+                            <p class="menu-item-bulk"><i class="fa-solid fa-box-open"></i> Bulk Pack: 80 pieces for $50</p>
+                            <div class="menu-card-footer">
+                                <a href="tel:301-332-9667" class="btn-card-order"><i class="fa-solid fa-phone"></i> Call to Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sel Roti Card -->
+                    <div class="menu-card" data-category="selroti">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/sel_roti.png" alt="Golden Sel Roti Stack" class="menu-card-img">
+                            <span class="menu-card-tag">Popular</span>
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-item-title">Crispy Golden Sel Roti</h3>
+                                <div class="menu-item-price-block">
+                                    <span class="menu-item-price">$15</span>
+                                    <span class="menu-item-pieces">10 Pieces</span>
+                                </div>
+                            </div>
+                            <p class="menu-item-desc">Traditional ring-shaped sweet rice bread, crispy on the outside and soft on the inside. Made from stone-ground rice batter flavored with ghee and cardamom.</p>
+                            <p class="menu-item-bulk"><i class="fa-solid fa-box-open"></i> Bulk Pack: 40 pieces for $50</p>
+                            <div class="menu-card-footer">
+                                <a href="tel:301-332-9667" class="btn-card-order"><i class="fa-solid fa-phone"></i> Call to Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon Card -->
+                    <div class="menu-card coming-soon-card" data-category="coming-soon">
+                        <div class="coming-soon-inner">
+                            <span class="coming-soon-icon"><i class="fa-solid fa-utensils"></i></span>
+                            <h3 class="coming-soon-title">More Dishes Coming Soon</h3>
+                            <p class="coming-soon-desc">More traditional Nepali dishes are on the way — including homemade achars, thali sets, and more. Check back soon or call Arun to ask about daily specials!</p>
+                            <a href="tel:301-332-9667" class="btn-card-order"><i class="fa-solid fa-phone"></i> Ask About Daily Specials</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Order Section -->
+        <section class="how-to-order-section" id="how-to-order">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-tag">EASY PROCESS</span>
+                    <h2 class="section-title">How to Place Your Order</h2>
+                    <p class="section-desc">We operate as a home kitchen cooking in small batches to preserve flavor and freshness. We do not use preservatives or pre-packaged ingredients.</p>
+                </div>
+                
+                <div class="steps-grid">
+                    <div class="step-card scroll-reveal-up">
+                        <div class="step-num">01</div>
+                        <h3>Choose Your Dishes</h3>
+                        <p>Browse our menu and decide on the traditional treats you'd like. Feel free to ask Arun about daily specials when you call!</p>
+                    </div>
+                    <div class="step-card scroll-reveal-up" style="animation-delay: 0.15s;">
+                        <div class="step-num">02</div>
+                        <h3>Call to Order</h3>
+                        <p>Call Arun directly at <a href="tel:301-332-9667" class="inline-link">301-332-9667</a>. Let us know what you want and your preferred pickup time. We recommend calling at least 1-2 hours in advance.</p>
+                    </div>
+                    <div class="step-card scroll-reveal-up" style="animation-delay: 0.3s;">
+                        <div class="step-num">03</div>
+                        <h3>Pickup &amp; Feast</h3>
+                        <p>We prepare your order right before you arrive so it's piping hot. Pick it up from our home kitchen and enjoy the authentic taste of Nepal!</p>
+                    </div>
+                </div>
+
+                <div class="order-notice-box scroll-reveal">
+                    <div class="notice-icon"><i class="fa-solid fa-bell"></i></div>
+                    <div class="notice-text">
+                        <strong>Important Order Notice:</strong> Because our foods are prepared completely fresh and without any artificial preservatives, we prepare limited quantities each day. Ordering early guarantees you won't miss out on your favorite items!
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="story-section" id="story">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-image-area scroll-reveal-left">
+                        <div class="frame-container">
+                            <img src="assets/founders.png" alt="Arun and Mina - Founders of Himalayan Home Foods" class="story-main-img">
+                            <div class="wood-carving-corner border-tl"></div>
+                            <div class="wood-carving-corner border-tr"></div>
+                            <div class="wood-carving-corner border-bl"></div>
+                            <div class="wood-carving-corner border-br"></div>
+                        </div>
+                    </div>
+                    <div class="story-text-area scroll-reveal-right">
+                        <span class="section-tag">OUR ORIGINS</span>
+                        <h2 class="section-title">The Warmth of a Nepali Hearth</h2>
+                        <p class="story-lead">Founded by Arun and Mina, Himalayan Home Foods is dedicated to bringing the cozy, authentic flavors of high-altitude home kitchens straight to your neighborhood.</p>
+                        <p>In traditional Nepali mountain homes, the kitchen ("chulo") is the sacred heart of the household. It is where fires burn slow, spices like jimbu, timur, and fenugreek are ground by hand on stone slabs, and family gatherings are warmed by steaming platters of fresh food.</p>
+                        <p>We honor these culinary roots by making everything from scratch. From the perfect folding of our momos to the careful fermentation of our seasonal achars, we bring you food that is honest, wholesome, and bursting with the real taste of home.</p>
+                        <div class="story-features">
+                            <div class="story-feature">
+                                <span class="feature-icon"><i class="fa-solid fa-wheat-awn"></i></span>
+                                <h4>Authentic Spices</h4>
+                                <p>Sourced and blended using traditional recipes.</p>
+                            </div>
+                            <div class="story-feature">
+                                <span class="feature-icon"><i class="fa-solid fa-fire-burner"></i></span>
+                                <h4>Made to Order</h4>
+                                <p>Prepared fresh for you when you call.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-card-wrapper">
+                    <div class="contact-info-panel">
+                        <span class="section-tag light">GET IN TOUCH</span>
+                        <h2 class="contact-panel-title">Let's Connect</h2>
+                        <p class="contact-panel-desc">Have a catering request, large family gathering, or questions about our recipes? Get in touch with Arun directly.</p>
+                        
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <span class="detail-icon"><i class="fa-solid fa-phone-volume"></i></span>
+                                <div>
+                                    <h5>Call to Order</h5>
+                                    <p><a href="tel:301-332-9667">301-332-9667</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-icon"><i class="fa-solid fa-envelope"></i></span>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p><a href="mailto:himalayanhomefoods@gmail.com">himalayanhomefoods@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-icon"><i class="fa-solid fa-clock"></i></span>
+                                <div>
+                                    <h5>Kitchen Hours</h5>
+                                    <p>9:00 AM - 6:00 PM (Every Day)</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-icon"><i class="fa-solid fa-user-tie"></i></span>
+                                <div>
+                                    <h5>Kitchen Owner</h5>
+                                    <p>Arun Paudel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel">
+                        <div class="cottage-illustration">
+                            <div class="logo-circle">
+                                <img src="assets/logo.jpg" alt="Logo Emblem" class="form-logo-img">
+                            </div>
+                            <h3>Himalayan Home Foods</h3>
+                            <p class="cottage-motto">"Real Taste of Home"</p>
+                            <div class="prayer-flags-decor">
+                                <span class="flag flag-blue"></span>
+                                <span class="flag flag-white"></span>
+                                <span class="flag flag-red"></span>
+                                <span class="flag flag-green"></span>
+                                <span class="flag flag-yellow"></span>
+                            </div>
+                            <div class="call-banner">
+                                <span class="pulse-ring"></span>
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="banner-text">Order Now by Calling</span>
+                                <a href="tel:301-332-9667" class="banner-num">301-332-9667</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/logo.jpg" alt="Himalayan Home Foods Logo" class="footer-logo">
+                    <p class="footer-about">Bringing the hearty, comfort foods of traditional mountain households in Nepal directly to your plate.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#how-to-order">How to Order</a></li>
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Our Kitchen</h4>
+                    <p>9:00 AM - 6:00 PM</p>
+                    <p>Monday - Sunday (7 Days a week)</p>
+                    <p>Pickup address provided upon order confirmation.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Himalayan Home Foods. All Rights Reserved. Prepared by Arun Paudel.</p>
+                <div class="namaste-badge">
+                    <i class="fa-solid fa-hands-praying"></i> Namaste
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Background Dhoon -->
+    <audio id="bgMusic" loop>
+        <source src="https://archive.org/download/terry-oldfield-discography/Terry%20Oldfield%20-%20Discography/2011%20-%20Healing%20Sound%20Journey%20~%20%28320%29/07.%20Bansuri%20Magic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Floating Audio Control Widget -->
+    <div class="music-control-container">
+        <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle background music">
+            <span class="music-pulse-ring"></span>
+            <i class="fa-solid fa-volume-xmark" id="musicIcon"></i>
+        </button>
+        <span class="music-tooltip">Play Traditional Flute Dhoon</span>
+    </div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>
