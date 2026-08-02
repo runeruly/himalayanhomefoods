@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HIMALAYAN HOME FOODS - CLIENT LOGIC
+   HIMALAYAN HOMEFOODS - CLIENT LOGIC
    Author: Arun Paudel (Owner) / Antigravity (AI pair programmer)
    ========================================================================== */
 
