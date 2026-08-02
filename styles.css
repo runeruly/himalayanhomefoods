@@ -507,10 +507,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .story-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 5rem;
-    align-items: center;
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .story-image-area {
