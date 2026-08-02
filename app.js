@@ -16,16 +16,56 @@ document.addEventListener('DOMContentLoaded', () => {
         '.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-up'
     );
 
-    // --- 1. Sticky Header ---
-    const handleScroll = () => {
-        if (window.scrollY > 50) {
+    // --- 1. Sticky Header + Scroll Spy (rAF-throttled, layout reads cached) ---
+    const heroSection = document.getElementById('home');
+    const heroBg = document.querySelector('.hero-bg');
+    const sections = document.querySelectorAll('section[id]');
+
+    let sectionOffsets = [];
+    const measureSections = () => {
+        sectionOffsets = [...sections].map(sec => ({
+            id: sec.getAttribute('id'),
+            top: sec.offsetTop,
+            height: sec.offsetHeight
+        }));
+    };
+
+    let ticking = false;
+    const updateScrollState = () => {
+        ticking = false;
+        const y = window.scrollY;
+
+        if (y > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
+
+        // Pause the hero zoom animation once the hero is out of view (perf)
+        if (heroBg && heroSection) {
+            heroBg.style.animationPlayState = (y > heroSection.offsetHeight) ? 'paused' : 'running';
+        }
+
+        sectionOffsets.forEach(sec => {
+            if (y > sec.top - 120 && y <= sec.top - 120 + sec.height) {
+                document.querySelector(`.nav-menu a[href*=${sec.id}]`)?.classList.add('active');
+            } else {
+                document.querySelector(`.nav-menu a[href*=${sec.id}]`)?.classList.remove('active');
+            }
+        });
     };
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Run once on load to set correct state
+
+    const onScroll = () => {
+        if (!ticking) {
+            requestAnimationFrame(updateScrollState);
+            ticking = true;
+        }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', measureSections);
+    measureSections();
+    updateScrollState(); // Run once on load to set correct state
 
     // --- 2. Mobile Menu Toggle ---
     if (navToggle && navMenu) {
@@ -60,26 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. Active Link on Scroll ---
-    const sections = document.querySelectorAll('section[id]');
-    const activeScrollSpy = () => {
-        const scrollY = window.pageYOffset;
-        
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 120; // offset for sticky header
-            const sectionId = current.getAttribute('id');
-            
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                document.querySelector(`.nav-menu a[href*=${sectionId}]`)?.classList.add('active');
-            } else {
-                document.querySelector(`.nav-menu a[href*=${sectionId}]`)?.classList.remove('active');
-            }
-        });
-    };
-    window.addEventListener('scroll', activeScrollSpy);
-
-    // --- 4. Menu Filtering ---
+    // --- 3. Menu Filtering ---
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             // Remove active from all buttons
