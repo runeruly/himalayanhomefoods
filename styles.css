@@ -989,6 +989,12 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-wood);
     color: #fff;
     padding: 4.5rem;
+    min-width: 0;
+}
+
+.contact-info-panel p {
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .contact-info-panel h2 {
@@ -1056,6 +1062,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     padding: 4rem;
     position: relative;
+    min-width: 0;
 }
 
 .cottage-illustration {
