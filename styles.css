@@ -1160,6 +1160,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: var(--color-wood-dark);
     z-index: 2;
+    white-space: nowrap;
 }
 
 .banner-num:hover {
@@ -1463,6 +1464,14 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+    
+    .call-banner {
+        padding: 1.5rem 1rem;
+    }
+    
+    .banner-num {
+        font-size: 1.3rem;
     }
 }
 
